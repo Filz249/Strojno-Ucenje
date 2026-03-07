@@ -11,7 +11,10 @@
 
 Razlika između strojnog učenja i eksplicitnog programiranja je ta da kod strojnog učenja, računalo uči iz podataka, dok kod eksplicitnog programiranja programer specificira na koji način se zadatak izvršava.
 
+
+
 </details>
+
 ---
 <br>
 <br>
@@ -36,7 +39,10 @@ primjeri:
 
 - Primjeri: stroj koji igra šah, mobilni robot koji traži izlaz iz labirinta
 
+
+
 </details>
+
 ---
 <br>
 <br>
@@ -47,7 +53,10 @@ primjeri:
 <img width="1038" height="729" alt="image" src="https://github.com/user-attachments/assets/50422cf3-64c0-493a-9899-419a7839a2de" />
 
   
+
+
 </details>
+
 ---
 <br>
 <br>
@@ -68,7 +77,9 @@ Koriste se:
 
 **Stupčasti dijagram** (engl.barplot) - U stupčastom dijagramu svaka je kategorija predstavljena stupcem, pri čemu duljina stupca predstavlja učestalost ili broj podatkovnih primjera unutar kategorije. Kategorije su obično predstavljene na x-osi, a učestalost ili broj na y-osi. Daje uvid u distribuciju kategoričkih veličina, uključujući učestalost ili broj svake kategorije.
 
+
 </details>
+
 ---
 <br>
 <br>
@@ -84,7 +95,9 @@ Koriste se:
 
 - Varijabla Y: težina (u kg)
 
+
 </details>
+
 ---
 <br>
 <br>
@@ -100,7 +113,9 @@ Koriste se:
 
 - Numeričke varijable je potrebno skalirati.
   
+
 </details>
+
 ---
 <br>
 <br>
@@ -118,7 +133,9 @@ Njih možemo:
   
 - Izbaciti podatkovne primjere ili veličine gdje se pojavljuju izostale vrijednosti.
 
+
 </details>
+
 ---
 <br>
 <br>
@@ -148,7 +165,9 @@ species: penguin species
 sex: penguin sex
 ```
   
+
 </details>
+
 ---
 <br>
 <br>
@@ -167,15 +186,18 @@ sex: penguin sex
 
 <ins>Primjer</ins>
 
-| Originalne vrijednosti| Min-max skaliranje | Standardizacija |
-|-----------------------|--------------------|-----------------|
-| 100                   | 0                  | -1.44280393     |
-| 120.2                 | 0.202              | -0.94528533     |
-| 180.8                 | 0.547              | 0.54727045      |
-| 190.9                 | 0.796              | 0.79602975      |
-| 201                   | 1.000              | 1.04478905      |
+| Originalne vrijednosti | Min-max skaliranje | Standardizacija |
+|-----------------------|---------------------|-----------------|
+| 100                   | 0                   | -1.44280393     |
+| 120.2                 | 0.202               | -0.94528533     |
+| 180.8                 | 0.547               | 0.54727045      |
+| 190.9                 | 0.796               | 0.79602975      |
+| 201                   | 1.000               | 1.04478905      |
+
+
 
 </details>
+
 ---
 <br>
 <br>
@@ -189,7 +211,9 @@ Obično podatke predstavljamo u obliku matrica i vektora.
 
 Postoje regresijski i klasifikacijski problemi.
 
+
 </details>
+
 ---
 <br>
 <br>
@@ -199,210 +223,270 @@ Postoje regresijski i klasifikacijski problemi.
 
 
   
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>12. Objasnite postupak procjene parametara linearnog regresijskog modela gradijentnom metodom. Koje su razlike između batch metode, stohastičke metode i mini-batch stohastičke metode?</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>13. Objasnite višedimenzionalnu linearnu regresiju. Navedite primjer.</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>14. Objasnite polinomsku regresiju. Objasnite podusklađivanje (underfitting) i pretjerano usklađivanje na podatke (overfitting) na primjeru polinomske regresije.</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>15. Što je evaluacija ili vrednovanje izgrađenog modela. Skicirajte princip evaluacije. Navedite metrike za vrednovanje regresijskih modela.</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>16. Navedite tri primjera binarne klasifikacije i tri primjera višeklasne klasifikacije. Što su moguće ulazne veličine u model u svakom navedenom primjeru?</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>17. Objasnite logističku regresiju: navedite odgovarajući matematički izraz (model) i skicirajte jednostavan binarni klasifikacijski problem s dvije ulazne veličine te što se dobiva primjenom logističke regresije.</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>18. Objasnite OvR i OvO pristup na jednostavnom (2D) problemu s tri klase i dvije ulazne veličine. Koje su prednosti i nedostatci pojedinog pristupa?</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>19. Objasnite matricu zabune. Što predstavlja svaki njen element? Objasnite točnost, preciznost, odziv i F1 mjeru.</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>20. Što je preciznost-odziv krivulja i ROC krivulja. Kako ih dobivamo?</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>21. Kako se izračunavaju metrike za evaluaciju u slučaju višeklasne klasifikacije? Pokažite na vlastitom primjeru s tri klase.</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>22. Objasnite algoritam K najbližih susjeda (KNN). Kako se najčešće definira mjera udaljenosti? Kako broj susjeda utječe na rezultate KNN algoritma? Koje su prednosti i nedostatci algoritma KNN?</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>23. Objasnite stablo odlučivanja. Skicirajte jednostavan primjer. Navedite koje su prednosti i nedostatci stabla odlučivanja.</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>24. Objasnite algoritam K srednjih vrijednosti na jednostavnom problemu s dvije ulazne veličine. Koji su načini inicijalizacije centara? Objasnite princip određivanja optimalnog broja grupa K.</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>25. Objasnite kvantizaciju boje digitalne slike pomoću algoritma K srednjih vrijednosti i kako se može postići kompresija slike.</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>26. Objasnite hijerarhijsko aglomerativno grupiranje na jednostavnom primjeru s dvije ulazne veličine (značajke). Na koje se sve načine može definirati udaljenost (sličnost) dva primjera ili grupe?</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>27. Što je smanjivanje dimenzionalnosti? Zašto se ono radi? Koja su dva glavna pristupa smanjivanju dimenzionalnosti? Na koji način analiza glavnih komponenti (PCA) radi smanjivanje dimenzionalnosti (načelno)?</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>28. Objasnite što je to umjetni neuron, skicirajte ga i navedite pripadne matematičke izraze.</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>29. Navedite i skicirajte minimalno 4 aktivacijske funkcije umjetnog neurona. Koje su prednosti i nedostatci pojedine aktivacijske funkcije?</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>30. Objasnite kakve su to unaprijedne potpuno povezane višeslojne neuronske mreže. Skicirajte jednu takvu mrežu i navedite broj parametara te mreže.</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>31. Što je duljina koraka? Kako može utjecati na proces treniranja neuronske mreže? Skicirajte.</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>32. Navedite osnovne korake prilikom izgradnje neuronske mreže. Objasnite princip treniranja neuronske mreže.</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>33. Objasnite princip sprječavanja pretjeranog usklađivanja na podatke za učenje pomoću ranog zaustavljanja (engl. early stopping).</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>34. Objasnite način predobrade podatkovnih primjera i strukturiranja mreže za problem klasifikacije rukom pisanih znamenki pomoću potpuno povezane neuronske mreže.</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>35. Objasnite tehniku nasumičnog izbacivanja neurona tijekom učenja (engl. dropout).</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>36. Što je 2D konvolucija. Objasnite/skicirajte na jednostavnom primjeru filtriranja digitalne slike.</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>37. Što je konvolucijski sloj i zašto se koristi? Skicirajte primjer primjene konvolucijskog sloja na neki ulazni volumen, naznačite ulazne i izlazne dimenzije. Što je stride? Što je padding? O čemu ovisi broj parametara konvolucijskog sloja?</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>38. Što je sloj sažimanja po maksimalnoj vrijednosti (eng. max pooling) i zašto se koristi? Skicirajte primjer primjene ovog sloja na neki volumen, naznačite ulazne i izlazne dimenzije.</strong></summary>
+ 
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>39. Što je augmentacija skupa podataka za učenje? Zašto se koristi?</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
 
 <details>
 <summary><strong>40. Što je učenjem prijenosom (engl. transfer learning) i kako se odvija?</strong></summary>
+
 </details>
+
 ---
 <br>
 <br>
