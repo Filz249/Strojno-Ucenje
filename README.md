@@ -369,9 +369,9 @@ Ulazne veličine mogu biti:
 
 Logistička regresija koristi se za **binarne klasifikacijske probleme**.
 
-Model koristi sigmoidnu funkciju:
+Model koristi funkciju:
 
-p(y=1|x) = 1 / (1 + e^(−(θ₀ + θ₁x)))
+![alt text](https://github.com/Filz249/Strojno-Ucenje/blob/main/formula3)
 
 Rezultat je vrijednost između 0 i 1 koja predstavlja vjerojatnost pripadnosti klasi.
 
