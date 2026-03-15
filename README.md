@@ -420,21 +420,21 @@ Elementi:
 - FP – false positive
 - FN – false negative
 
-**Accuracy**
+**Točnost**
 
 (TP + TN) / (TP + TN + FP + FN)
 
-**Precision**
+**Preciznost**
 
 TP / (TP + FP)
 
-**Recall**
+**Odziv**
 
 TP / (TP + FN)
 
 **F1**
 
-2 × (precision × recall) / (precision + recall)
+2 × (preciznost × rodziv) / (preciznost + rodziv)
 
 
 ![alt text](https://github.com/Filz249/Strojno-Ucenje/blob/main/matricaZabune.png)
