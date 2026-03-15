@@ -284,7 +284,7 @@ Višedimenzionalna linearna regresija koristi **više ulaznih veličina**.
 
 Model:
 
-y = θ₀ + θ₁x₁ + θ₂x₂ + ... + θₙxₙ
+![alt text](https://github.com/Filz249/Strojno-Ucenje/blob/main/formula2)
 
 Primjer:
 
