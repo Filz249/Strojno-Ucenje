@@ -330,6 +330,7 @@ Postupak:
 3. Model se testira na testnom skupu
 
 Skica:
+
 ![alt text](http://github.com/Filz249/Strojno-Ucenje/blob/main/evaluacija)
 
 **Metrike za regresiju:**
