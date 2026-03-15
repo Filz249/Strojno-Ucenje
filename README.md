@@ -436,6 +436,9 @@ TP / (TP + FN)
 
 2 × (precision × recall) / (precision + recall)
 
+
+![alt text]([image-url](https://github.com/Filz249/Strojno-Ucenje/blob/main/matricaZabune.png))
+
 </details>
 
 ---
