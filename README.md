@@ -331,7 +331,7 @@ Postupak:
 
 Skica:
 
-![alt text]([http://github.com/Filz249/Strojno-Ucenje/blob/main/evaluacija](https://github.com/Filz249/Strojno-Ucenje/blob/main/evaluacija))
+![alt text](https://github.com/Filz249/Strojno-Ucenje/blob/main/evaluacija.png)
 
 **Metrike za regresiju:**
 - MAE (Mean Absolute Error)
