@@ -329,6 +329,9 @@ Postupak:
 2. Model se trenira na skupu za učenje
 3. Model se testira na testnom skupu
 
+Skica:
+![alt text](http://github.com/Filz249/Strojno-Ucenje/blob/main/evaluacija)
+
 **Metrike za regresiju:**
 - MAE (Mean Absolute Error)
 - MSE (Mean Squared Error)
