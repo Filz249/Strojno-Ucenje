@@ -258,7 +258,7 @@ Algoritam:
 2. Izračuna se gradijent kriterijske funkcije
 3. Parametri se ažuriraju u smjeru negativnog gradijenta
 
-θ = θ − α∇J(θ)
+θj = θj − α*∇J(θ)/∇(θj)
 
 gdje je α duljina koraka (learning rate).
 
