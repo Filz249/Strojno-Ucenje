@@ -221,8 +221,26 @@ Postoje regresijski i klasifikacijski problemi.
 <details>
 <summary><strong>11. Objasnite jednostavnu linearnu regresiju. Objasnite kriterijsku funkciju, skicirajte prikladni primjer.</strong></summary>
 
+**Jednostavna linearna regresija** opisuje odnos između jedne ulazne veličine \(x\) i jedne izlazne veličine \(y\) pomoću pravca.
 
-  
+Model:
+
+y = θ₀ + θ₁x
+
+gdje su:
+- x – ulazna veličina  
+- y – izlazna veličina  
+- θ₀ – odsječak na osi  
+- θ₁ – nagib pravca
+
+**Kriterijska funkcija** mjeri koliko dobro model opisuje podatke.  
+Najčešće se koristi **srednja kvadratna pogreška (MSE)**:
+
+J(θ) = (1/n) Σ (yᵢ − ŷᵢ)²
+
+Cilj je pronaći parametre koji minimiziraju pogrešku između stvarnih i predviđenih vrijednosti.
+
+Primjer: procjena plaće osobe na temelju radnog staža.
 
 </details>
 
@@ -233,6 +251,26 @@ Postoje regresijski i klasifikacijski problemi.
 <details>
 <summary><strong>12. Objasnite postupak procjene parametara linearnog regresijskog modela gradijentnom metodom. Koje su razlike između batch metode, stohastičke metode i mini-batch stohastičke metode?</strong></summary>
 
+Parametri modela mogu se odrediti **gradijentnim spustom (gradient descent)**.
+
+Algoritam:
+1. Odabiru se početne vrijednosti parametara
+2. Izračuna se gradijent kriterijske funkcije
+3. Parametri se ažuriraju u smjeru negativnog gradijenta
+
+θ = θ − α∇J(θ)
+
+gdje je α duljina koraka (learning rate).
+
+**Batch gradient descent**
+- koristi cijeli skup podataka u svakoj iteraciji
+
+**Stohastički gradient descent (SGD)**
+- parametri se ažuriraju nakon svakog podatkovnog primjera
+
+**Mini-batch gradient descent**
+- parametri se ažuriraju koristeći male skupine podataka
+
 </details>
 
 ---
@@ -241,6 +279,20 @@ Postoje regresijski i klasifikacijski problemi.
 
 <details>
 <summary><strong>13. Objasnite višedimenzionalnu linearnu regresiju. Navedite primjer.</strong></summary>
+
+Višedimenzionalna linearna regresija koristi **više ulaznih veličina**.
+
+Model:
+
+y = θ₀ + θ₁x₁ + θ₂x₂ + ... + θₙxₙ
+
+Primjer:
+
+Procjena cijene kuće na temelju:
+- površine
+- broja soba
+- starosti kuće
+- lokacije.
 
 </details>
 
@@ -251,6 +303,16 @@ Postoje regresijski i klasifikacijski problemi.
 <details>
 <summary><strong>14. Objasnite polinomsku regresiju. Objasnite podusklađivanje (underfitting) i pretjerano usklađivanje na podatke (overfitting) na primjeru polinomske regresije.</strong></summary>
 
+Polinomska regresija koristi se kada odnos između ulazne i izlazne veličine nije linearan.
+
+Primjer modela:
+
+y = θ₀ + θ₁x + θ₂x² + θ₃x³
+
+**Underfitting** – model je prejednostavan i ne može dobro opisati podatke.
+
+**Overfitting** – model je previše prilagođen podacima za učenje i loše generalizira na nove podatke.
+
 </details>
 
 ---
@@ -259,6 +321,18 @@ Postoje regresijski i klasifikacijski problemi.
 
 <details>
 <summary><strong>15. Što je evaluacija ili vrednovanje izgrađenog modela. Skicirajte princip evaluacije. Navedite metrike za vrednovanje regresijskih modela.</strong></summary>
+
+Evaluacija modela predstavlja procjenu kvalitete modela.
+
+Postupak:
+1. Podaci se podijele na skup za učenje i testni skup
+2. Model se trenira na skupu za učenje
+3. Model se testira na testnom skupu
+
+**Metrike za regresiju:**
+- MAE (Mean Absolute Error)
+- MSE (Mean Squared Error)
+- RMSE (Root Mean Squared Error)
 
 </details>
 
@@ -269,23 +343,20 @@ Postoje regresijski i klasifikacijski problemi.
 <details>
 <summary><strong>16. Navedite tri primjera binarne klasifikacije i tri primjera višeklasne klasifikacije. Što su moguće ulazne veličine u model u svakom navedenom primjeru?</strong></summary>
 
-</details>
+**Binarna klasifikacija**
+- spam / nije spam (ulaz: tekst emaila)
+- bolest / zdravlje (ulaz: medicinski podaci)
+- prevara / normalna transakcija (ulaz: podaci o transakciji)
 
----
-<br>
-<br>
+**Višeklasna klasifikacija**
+- prepoznavanje znamenki (0–9)
+- klasifikacija vrsta cvijeća
+- klasifikacija vrsta dokumenata
 
-<details>
-<summary><strong>17. Objasnite logističku regresiju: navedite odgovarajući matematički izraz (model) i skicirajte jednostavan binarni klasifikacijski problem s dvije ulazne veličine te što se dobiva primjenom logističke regresije.</strong></summary>
-
-</details>
-
----
-<br>
-<br>
-
-<details>
-<summary><strong>18. Objasnite OvR i OvO pristup na jednostavnom (2D) problemu s tri klase i dvije ulazne veličine. Koje su prednosti i nedostatci pojedinog pristupa?</strong></summary>
+Ulazne veličine mogu biti:
+- numeričke značajke
+- tekst
+- značajke slike.
 
 </details>
 
@@ -294,7 +365,17 @@ Postoje regresijski i klasifikacijski problemi.
 <br>
 
 <details>
-<summary><strong>19. Objasnite matricu zabune. Što predstavlja svaki njen element? Objasnite točnost, preciznost, odziv i F1 mjeru.</strong></summary>
+<summary><strong>17. Objasnite logističku regresiju.</strong></summary>
+
+Logistička regresija koristi se za **binarne klasifikacijske probleme**.
+
+Model koristi sigmoidnu funkciju:
+
+p(y=1|x) = 1 / (1 + e^(−(θ₀ + θ₁x)))
+
+Rezultat je vrijednost između 0 i 1 koja predstavlja vjerojatnost pripadnosti klasi.
+
+Ako je vjerojatnost veća od određenog praga (npr. 0.5), primjer se klasificira kao pozitivna klasa.
 
 </details>
 
@@ -303,7 +384,20 @@ Postoje regresijski i klasifikacijski problemi.
 <br>
 
 <details>
-<summary><strong>20. Što je preciznost-odziv krivulja i ROC krivulja. Kako ih dobivamo?</strong></summary>
+<summary><strong>18. Objasnite OvR i OvO pristup.</strong></summary>
+
+Kod problema s više klasa koriste se dvije strategije.
+
+**One-vs-Rest (OvR)**  
+Za K klasa trenira se K klasifikatora.  
+Svaki klasifikator razlikuje jednu klasu od svih ostalih.
+
+**One-vs-One (OvO)**  
+Trenira se klasifikator za svaki par klasa.
+
+Broj klasifikatora:
+
+K(K−1)/2
 
 </details>
 
@@ -312,7 +406,31 @@ Postoje regresijski i klasifikacijski problemi.
 <br>
 
 <details>
-<summary><strong>21. Kako se izračunavaju metrike za evaluaciju u slučaju višeklasne klasifikacije? Pokažite na vlastitom primjeru s tri klase.</strong></summary>
+<summary><strong>19. Objasnite matricu zabune.</strong></summary>
+
+Matrica zabune prikazuje rezultate klasifikacije.
+
+Elementi:
+- TP – true positive
+- TN – true negative
+- FP – false positive
+- FN – false negative
+
+**Accuracy**
+
+(TP + TN) / (TP + TN + FP + FN)
+
+**Precision**
+
+TP / (TP + FP)
+
+**Recall**
+
+TP / (TP + FN)
+
+**F1**
+
+2 × (precision × recall) / (precision + recall)
 
 </details>
 
@@ -321,7 +439,15 @@ Postoje regresijski i klasifikacijski problemi.
 <br>
 
 <details>
-<summary><strong>22. Objasnite algoritam K najbližih susjeda (KNN). Kako se najčešće definira mjera udaljenosti? Kako broj susjeda utječe na rezultate KNN algoritma? Koje su prednosti i nedostatci algoritma KNN?</strong></summary>
+<summary><strong>20. Što je precision-recall krivulja i ROC krivulja?</strong></summary>
+
+**Precision-Recall krivulja** prikazuje odnos između preciznosti i odziva za različite pragove klasifikacije.
+
+**ROC krivulja** prikazuje odnos između:
+- True Positive Rate
+- False Positive Rate
+
+Koristi se za procjenu kvalitete klasifikatora.
 
 </details>
 
@@ -330,7 +456,13 @@ Postoje regresijski i klasifikacijski problemi.
 <br>
 
 <details>
-<summary><strong>23. Objasnite stablo odlučivanja. Skicirajte jednostavan primjer. Navedite koje su prednosti i nedostatci stabla odlučivanja.</strong></summary>
+<summary><strong>21. Kako se izračunavaju metrike za evaluaciju u slučaju višeklasne klasifikacije?</strong></summary>
+
+Kod višeklasne klasifikacije metrike se računaju za svaku klasu posebno.
+
+Zatim se koriste metode:
+- **macro averaging** – prosjek metrika svih klasa
+- **micro averaging** – globalni izračun metrika
 
 </details>
 
@@ -339,7 +471,16 @@ Postoje regresijski i klasifikacijski problemi.
 <br>
 
 <details>
-<summary><strong>24. Objasnite algoritam K srednjih vrijednosti na jednostavnom problemu s dvije ulazne veličine. Koji su načini inicijalizacije centara? Objasnite princip određivanja optimalnog broja grupa K.</strong></summary>
+<summary><strong>22. Objasnite algoritam K najbližih susjeda (KNN).</strong></summary>
+
+KNN je algoritam klasifikacije temeljen na udaljenosti između primjera.
+
+Postupak:
+1. izračuna se udaljenost između novog primjera i svih podataka
+2. odabere se K najbližih susjeda
+3. klasa se određuje većinskim glasovanjem
+
+Najčešća mjera udaljenosti je **Euklidska udaljenost**.
 
 </details>
 
@@ -348,7 +489,19 @@ Postoje regresijski i klasifikacijski problemi.
 <br>
 
 <details>
-<summary><strong>25. Objasnite kvantizaciju boje digitalne slike pomoću algoritma K srednjih vrijednosti i kako se može postići kompresija slike.</strong></summary>
+<summary><strong>23. Objasnite stablo odlučivanja.</strong></summary>
+
+Stablo odlučivanja je model koji koristi strukturu stabla.
+
+- unutarnji čvorovi predstavljaju uvjete
+- grane predstavljaju odluke
+- listovi predstavljaju klasifikaciju ili vrijednost
+
+Prednosti:
+- jednostavno za interpretaciju
+
+Nedostatci:
+- sklono overfittingu.
 
 </details>
 
@@ -357,7 +510,16 @@ Postoje regresijski i klasifikacijski problemi.
 <br>
 
 <details>
-<summary><strong>26. Objasnite hijerarhijsko aglomerativno grupiranje na jednostavnom primjeru s dvije ulazne veličine (značajke). Na koje se sve načine može definirati udaljenost (sličnost) dva primjera ili grupe?</strong></summary>
+<summary><strong>24. Objasnite algoritam K srednjih vrijednosti.</strong></summary>
+
+K-means je algoritam za grupiranje podataka.
+
+Postupak:
+1. odabere se broj grupa K
+2. inicijaliziraju se centri grupa
+3. svaki primjer se dodjeljuje najbližem centru
+4. centri se ponovno izračunaju
+5. postupak se ponavlja do konvergencije.
 
 </details>
 
@@ -366,7 +528,15 @@ Postoje regresijski i klasifikacijski problemi.
 <br>
 
 <details>
-<summary><strong>27. Što je smanjivanje dimenzionalnosti? Zašto se ono radi? Koja su dva glavna pristupa smanjivanju dimenzionalnosti? Na koji način analiza glavnih komponenti (PCA) radi smanjivanje dimenzionalnosti (načelno)?</strong></summary>
+<summary><strong>25. Objasnite kvantizaciju boje digitalne slike pomoću algoritma K srednjih vrijednosti.</strong></summary>
+
+Svaki piksel slike ima RGB vrijednosti.
+
+K-means algoritam može grupirati slične boje u K grupa.
+
+Svaki piksel se zamjenjuje bojom centra svoje grupe.
+
+Time se smanjuje broj boja u slici i postiže **kompresija slike**.
 
 </details>
 
@@ -375,7 +545,13 @@ Postoje regresijski i klasifikacijski problemi.
 <br>
 
 <details>
-<summary><strong>28. Objasnite što je to umjetni neuron, skicirajte ga i navedite pripadne matematičke izraze.</strong></summary>
+<summary><strong>26. Objasnite hijerarhijsko aglomerativno grupiranje.</strong></summary>
+
+Algoritam započinje tako da je svaki podatkovni primjer zasebna grupa.
+
+Zatim se najbliže grupe postupno spajaju.
+
+Rezultat se prikazuje **dendrogramom**.
 
 </details>
 
@@ -384,7 +560,16 @@ Postoje regresijski i klasifikacijski problemi.
 <br>
 
 <details>
-<summary><strong>29. Navedite i skicirajte minimalno 4 aktivacijske funkcije umjetnog neurona. Koje su prednosti i nedostatci pojedine aktivacijske funkcije?</strong></summary>
+<summary><strong>27. Što je smanjivanje dimenzionalnosti?</strong></summary>
+
+Smanjivanje dimenzionalnosti je proces smanjenja broja značajki u skupu podataka.
+
+Razlozi:
+- brže treniranje
+- manje memorije
+- uklanjanje redundantnih značajki
+
+Jedna od metoda je **PCA (Principal Component Analysis)**.
 
 </details>
 
@@ -393,7 +578,13 @@ Postoje regresijski i klasifikacijski problemi.
 <br>
 
 <details>
-<summary><strong>30. Objasnite kakve su to unaprijedne potpuno povezane višeslojne neuronske mreže. Skicirajte jednu takvu mrežu i navedite broj parametara te mreže.</strong></summary>
+<summary><strong>28. Što je umjetni neuron?</strong></summary>
+
+Umjetni neuron prima ulazne vrijednosti, množi ih s težinama i računa zbroj.
+
+z = Σ(wᵢxᵢ) + b
+
+Rezultat se zatim prosljeđuje kroz aktivacijsku funkciju.
 
 </details>
 
@@ -402,7 +593,16 @@ Postoje regresijski i klasifikacijski problemi.
 <br>
 
 <details>
-<summary><strong>31. Što je duljina koraka? Kako može utjecati na proces treniranja neuronske mreže? Skicirajte.</strong></summary>
+<summary><strong>29. Aktivacijske funkcije umjetnog neurona.</strong></summary>
+
+Primjeri:
+
+- Sigmoid
+- ReLU
+- Tanh
+- Softmax
+
+Aktivacijske funkcije uvode nelinearnost u neuronsku mrežu.
 
 </details>
 
@@ -411,7 +611,14 @@ Postoje regresijski i klasifikacijski problemi.
 <br>
 
 <details>
-<summary><strong>32. Navedite osnovne korake prilikom izgradnje neuronske mreže. Objasnite princip treniranja neuronske mreže.</strong></summary>
+<summary><strong>30. Potpuno povezane višeslojne neuronske mreže.</strong></summary>
+
+U potpuno povezanoj mreži svaki neuron jednog sloja povezan je sa svim neuronima sljedećeg sloja.
+
+Sastoji se od:
+- ulaznog sloja
+- skrivenih slojeva
+- izlaznog sloja.
 
 </details>
 
@@ -420,7 +627,15 @@ Postoje regresijski i klasifikacijski problemi.
 <br>
 
 <details>
-<summary><strong>33. Objasnite princip sprječavanja pretjeranog usklađivanja na podatke za učenje pomoću ranog zaustavljanja (engl. early stopping).</strong></summary>
+<summary><strong>31. Što je duljina koraka?</strong></summary>
+
+Duljina koraka (learning rate) određuje koliko se parametri mijenjaju tijekom treniranja.
+
+Premala vrijednost:
+- sporo treniranje
+
+Prevelika vrijednost:
+- nestabilno treniranje.
 
 </details>
 
@@ -429,7 +644,13 @@ Postoje regresijski i klasifikacijski problemi.
 <br>
 
 <details>
-<summary><strong>34. Objasnite način predobrade podatkovnih primjera i strukturiranja mreže za problem klasifikacije rukom pisanih znamenki pomoću potpuno povezane neuronske mreže.</strong></summary>
+<summary><strong>32. Osnovni koraci izgradnje neuronske mreže.</strong></summary>
+
+1. priprema podataka  
+2. definiranje arhitekture mreže  
+3. inicijalizacija parametara  
+4. treniranje modela  
+5. evaluacija modela.
 
 </details>
 
@@ -438,7 +659,11 @@ Postoje regresijski i klasifikacijski problemi.
 <br>
 
 <details>
-<summary><strong>35. Objasnite tehniku nasumičnog izbacivanja neurona tijekom učenja (engl. dropout).</strong></summary>
+<summary><strong>33. Early stopping.</strong></summary>
+
+Early stopping je metoda za sprječavanje overfittinga.
+
+Treniranje se zaustavlja kada pogreška na validacijskom skupu počne rasti.
 
 </details>
 
@@ -447,7 +672,14 @@ Postoje regresijski i klasifikacijski problemi.
 <br>
 
 <details>
-<summary><strong>36. Što je 2D konvolucija. Objasnite/skicirajte na jednostavnom primjeru filtriranja digitalne slike.</strong></summary>
+<summary><strong>34. Klasifikacija rukom pisanih znamenki.</strong></summary>
+
+Slike znamenki pretvaraju se u vektore piksela.
+
+Neuronska mreža ima:
+- ulazni sloj (pikseli)
+- skrivene slojeve
+- izlazni sloj s 10 neurona (0–9).
 
 </details>
 
@@ -456,7 +688,25 @@ Postoje regresijski i klasifikacijski problemi.
 <br>
 
 <details>
-<summary><strong>37. Što je konvolucijski sloj i zašto se koristi? Skicirajte primjer primjene konvolucijskog sloja na neki ulazni volumen, naznačite ulazne i izlazne dimenzije. Što je stride? Što je padding? O čemu ovisi broj parametara konvolucijskog sloja?</strong></summary>
+<summary><strong>35. Dropout.</strong></summary>
+
+Dropout je tehnika regularizacije.
+
+Tijekom treniranja nasumično se isključuje dio neurona kako bi se smanjio overfitting.
+
+</details>
+
+---
+
+<br>
+<br>
+
+<details>
+<summary><strong>36. Što je 2D konvolucija?</strong></summary>
+
+2D konvolucija je operacija filtriranja slike pomoću matrice filtera (kernel).
+
+Filter se pomiče preko slike i računa se zbroj umnožaka piksela i elemenata filtera.
 
 </details>
 
@@ -465,8 +715,32 @@ Postoje regresijski i klasifikacijski problemi.
 <br>
 
 <details>
-<summary><strong>38. Što je sloj sažimanja po maksimalnoj vrijednosti (eng. max pooling) i zašto se koristi? Skicirajte primjer primjene ovog sloja na neki volumen, naznačite ulazne i izlazne dimenzije.</strong></summary>
- 
+<summary><strong>37. Konvolucijski sloj.</strong></summary>
+
+Konvolucijski sloj primjenjuje više filtera na ulaznu sliku.
+
+**Stride** – korak pomicanja filtera.  
+**Padding** – dodavanje nula oko slike.
+
+Broj parametara ovisi o:
+- veličini filtera
+- broju filtera.
+
+</details>
+
+---
+<br>
+<br>
+
+<details>
+<summary><strong>38. Max pooling.</strong></summary>
+
+Max pooling smanjuje dimenziju podataka.
+
+Za svaki prozor uzima se **maksimalna vrijednost**.
+
+Time se zadržavaju najvažnije značajke.
+
 </details>
 
 ---
@@ -476,6 +750,19 @@ Postoje regresijski i klasifikacijski problemi.
 <details>
 <summary><strong>39. Što je augmentacija skupa podataka za učenje? Zašto se koristi?</strong></summary>
 
+Augmentacija podataka je tehnika povećanja skupa podataka umjetnim stvaranjem novih primjera.
+
+Primjeri:
+- rotacija slike
+- zrcaljenje
+- pomicanje
+- promjena osvjetljenja
+
+Koristi se kako bi se:
+- povećala količina podataka
+- smanjio overfitting
+- poboljšala generalizacija modela.
+
 </details>
 
 ---
@@ -483,10 +770,22 @@ Postoje regresijski i klasifikacijski problemi.
 <br>
 
 <details>
-<summary><strong>40. Što je učenjem prijenosom (engl. transfer learning) i kako se odvija?</strong></summary>
+<summary><strong>40. Što je učenjem prijenosom (transfer learning)?</strong></summary>
+
+Transfer learning je tehnika u kojoj se koristi već trenirani model za novi problem.
+
+Postupak:
+1. koristi se model treniran na velikom skupu podataka
+2. uklanja se završni sloj
+3. dodaje se novi sloj za novi zadatak
+4. model se dodatno trenira
+
+Prednost je brže treniranje i potreba za manjim skupom podataka.
 
 </details>
 
 ---
+<br>
+<br>
 <br>
 <br>
