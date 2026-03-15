@@ -258,7 +258,7 @@ Algoritam:
 2. Izračuna se gradijent kriterijske funkcije
 3. Parametri se ažuriraju u smjeru negativnog gradijenta
 
-![Formula]([image-url](https://github.com/Filz249/Strojno-Ucenje/blob/main/Snimka%20zaslona%202026-03-15%20165953.png))
+![Formula](https://github.com/Filz249/Strojno-Ucenje/blob/main/formula)
 
 gdje je α duljina koraka (learning rate).
 
