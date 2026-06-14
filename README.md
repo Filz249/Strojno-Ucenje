@@ -1,6 +1,9 @@
 # <p align="center">Strojno Učenje - pitanja za usmeni</p>
 
 Pitanja koja su bila: 1, 2, 3, 6, 8, 9, 10, 13, 18, 19, 22, 25, 32, 35, 36, 37, 38
+---
+<br>
+<br>
 
 <details>
 <summary><strong>1. Što je umjetna inteligencija? Što je strojno učenje? Koja je razlika između eksplicitnog programiranja računala i strojnog učenja? Navedite kakvi problemi se rješavaju pojedinim pristupom (primjeri).</strong></summary>
