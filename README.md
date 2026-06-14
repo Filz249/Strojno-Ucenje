@@ -146,27 +146,17 @@ Njih možemo:
 
 **Nominalne veličine** – ne postoji odnos između mogućih vrijednosti (npr. boja očiju osobe, spol i slično).
 
-```
-bill_length_mm: bill length (mm)
-
-bill_depth_mm: bill depth (mm)
-
-flipper_length_mm: flipper length (mm)
-
-body_mass_g: body mass (g)
-```
+- Ako osoba ima Plave oči -> [1, 0, 0]
+- Ako osoba ima Smeđe oči -> [0, 1, 0]
+- Ako osoba ima Zelene oči -> [0, 0, 1]
 
 **Ordinalne veličine** – postoji odnos između mogućih vrijednosti te je moguće ovakve vrijednosti poredati odnosno sortirati (npr. stupanj obrazovanja osobe, dobna skupina, ocjena iz kolegija, zadovoljstvo korisnika usluge i slično).
 
-```
-island: island name
-
-species: penguin species
-
-sex: penguin sex
-```
+- Dovoljan (2) -> 0
+- Dobar (3) -> 1
+- Vrlo dobar (4) -> 2
+- Izvrstan (5) -> 3
   
-
 </details>
 
 ---
