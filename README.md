@@ -429,7 +429,7 @@ TP / (TP + FN)
 
 **F1**
 
-2 × (preciznost × rodziv) / (preciznost + rodziv)
+2 × (preciznost × odziv) / (preciznost + odziv)
 
 
 ![alt text](https://github.com/Filz249/Strojno-Ucenje/blob/main/matricaZabune.png)
