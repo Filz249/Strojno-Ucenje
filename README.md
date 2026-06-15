@@ -1,6 +1,5 @@
 # <p align="center">Strojno Učenje - pitanja za usmeni</p>
 
-Pitanja koja su bila: 1, 2, 3, 6, 8, 9, 10, 13, 18, 19, 22, 25, 32, 35, 36, 37, 38
 ---
 <br>
 <br>
